@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class FileDump(models.Model):
+    upload = models.FileField(upload_to="characters/")
+    timestamp = models.DateTimeField(auto_now_add=True, blank=True)
