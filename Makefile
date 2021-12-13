@@ -3,6 +3,9 @@
 bootstrap: # Install dependencies via poetry
 	@poetry install
 
+migrate: # Migrate changes made to models
+	@poetry run python manage.py migrate
+
 server: # Start Django development server
 	@poetry run python manage.py runserver
 
